@@ -1,19 +1,22 @@
 {
-  "name": "tiny-range-binarysearch",
-  "version": "0.0.1",
-  "description": "Binary search for tiny-range https://www.npmjs.com/package/tiny-range",
+  "name": "tinyBinarySearch",
+  "version": "1.0.0",
+  "description": "binary search for tiny range output",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Vidur Khanna <vidur.khanna@paytm.com>",
+  "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "git://github.com/paytm/tiny-range-binarysearch.git"
+    "url": "https://github.com/khannavidur/tiny-range-binarysearch.git"
   },
-  "author": "Vidur Khanna",
-  "license": "MIT",
+  "keywords": [
+    "tiny-range",
+    "binarySearch"
+  ],
   "bugs": {
-    "url": "https://github.com/paytm/tiny-range-binarysearch/issues"
-  },
-  "homepage": "https://github.com/paytm/tiny-range-binarysearch"
+    "url": "https://github.com/khannavidur/tiny-range-binarysearch/issues"
+  }
 }
