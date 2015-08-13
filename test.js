@@ -12,9 +12,9 @@ console.log("binarySearch(arr, 14) - ", binarySearch(arr, 14));
 console.log("binarySearch(arr, 15) - ", binarySearch(arr, 15));
 console.log("binarySearch(arr, 29) - ", binarySearch(arr, 29));
 
-assert.equal(binarySearch(arr, 0), 0);
-assert.equal(binarySearch(arr, 5), 5);
-assert.equal(binarySearch(arr, 9), 9);
-assert.equal(binarySearch(arr, 14), 13);
-assert.equal(binarySearch(arr, 15), 13);
-assert.equal(binarySearch(arr, 29), 30);
+assert.equal(binarySearch(arr, 0).neighbour, 0);
+assert.equal(binarySearch(arr, 5).neighbour, 5);
+assert.equal(binarySearch(arr, 9).neighbour, 9);
+assert.equal(binarySearch(arr, 14).neighbour, 13);
+assert.equal(binarySearch(arr, 15).neighbour, 13);
+assert.equal(binarySearch(arr, 29).neighbour, 30);

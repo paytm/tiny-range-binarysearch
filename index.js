@@ -9,15 +9,23 @@ var me = {
             if (begin > end) {
                 if(arr[end]!==undefined) {
                     // Fallen off the largest end of the array
-                    return Array.isArray(arr[end]) ? arr[end][1] : arr[end];
+                    return {
+                        'foundMatch': false,
+                        'neighbour': Array.isArray(arr[end]) ? arr[end][1] : arr[end]
+                    };
                 }
                 else if (arr[begin]!==undefined) {
                     // Fallen off the smallest end of the array
-                    return Array.isArray(arr[begin]) ? arr[begin][0] : arr[begin];
+                    return {
+                        'foundMatch': false,
+                        'neighbour': Array.isArray(arr[begin]) ? arr[begin][0] : arr[begin]
+                    };
                 }
             }
             else {
-                console.error(' begin < end, but arr[begin] or arr[end] is undefined, for begin: ', begin, ' end: ', end);
+                // Ideally, we should never be reaching here.
+                // If we did, something's really really wrong.
+                console.error(' begin < end, but arr[begin] or arr[end] is undefined, for begin: ', begin, ' end: ', end, ' arr: ', arr);
             }
         }
 
@@ -25,7 +33,7 @@ var me = {
             var mid = Math.ceil((begin + end)/2);
             if(!Array.isArray(arr[mid])) {
             
-                if(arr[mid]==no)  return no;
+                if(arr[mid]==no)  return {'foundMatch': true, 'neighbour': no};
                 else {
                     if(no > arr[mid]) {
                         begin = mid +1;
@@ -36,7 +44,7 @@ var me = {
                     }
                 }
             } else {
-                if(no >= arr[mid][0] && arr[mid][1] >= no) return no; 
+                if(no >= arr[mid][0] && arr[mid][1] >= no) return { 'foundMatch': true, 'neighbour': no}; 
                 else {
                     if(no < arr[mid][0]) {
                         end = mid-1;
@@ -87,10 +95,10 @@ var me = {
             beginDist = Math.abs(no - beginCandidate);
             endDist = Math.abs(no - endCandidate);
 
-            if (beginDist < endDist)
-                return beginCandidate;
-            else
-                return endCandidate;
+            return {
+                'foundMatch' : false,
+                'neighbour' : (beginDist < endDist) ? beginCandidate : endCandidate
+            };
         }
     }
 };
