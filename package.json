@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git://github.com/paytm/tiny-range-binarysearch.git"
   },
-  "author": "Vidur Khanna",
+  "author": "Paytm",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paytm/tiny-range-binarysearch/issues"
