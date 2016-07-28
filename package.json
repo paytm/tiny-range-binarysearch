@@ -1,6 +1,6 @@
 {
   "name": "tiny-range-binarysearch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Binary search for tiny-range https://www.npmjs.com/package/tiny-range",
   "main": "index.js",
   "scripts": {
